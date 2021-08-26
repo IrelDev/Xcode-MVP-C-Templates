@@ -3,9 +3,17 @@
 import UIKit
 
 final class ___FILEBASENAMEASIDENTIFIER___: ___VARIABLE_productName___PresenterProtocol {
-    typealias PresenterView = ___VARIABLE_productName___ViewController
-    typealias Coordinator = ___VARIABLE_productName___Coordinator
-    
     var view: PresenterView?
-    var coordinator: Coordinator?
+    
+    var castedView: CastedView {
+        guard let view = view else {
+            fatalError("PresenterView must not be nil")
+        }
+
+        guard let castedView = view as? CastedView else {
+            fatalError("Type Error. PresenterView must be \(CastedView.self)")
+        }
+        
+        return castedView
+    }
 }
