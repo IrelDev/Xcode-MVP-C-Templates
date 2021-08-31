@@ -14,7 +14,7 @@ protocol CoordinatorProtocol: NSObject {
 }
 
 extension CoordinatorProtocol {
-    init(navigationController: UIViewController, parent: CoordinatorProtocol? = nil) {
+    init(navigationController: UIViewController?, parent: CoordinatorProtocol? = nil) {
         self.init()
         
         self.navigationController = navigationController
