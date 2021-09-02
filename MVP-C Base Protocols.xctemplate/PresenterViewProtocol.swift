@@ -9,7 +9,7 @@ protocol PresenterViewProtocol: NSObject {
     var presenter: Presenter { get set }
     var coordinator: Coordinator? { get set }
 
-    init(presenter: Presenter)
+    init(presenter: Presenter, coordinator: Coordinator?)
 }
 extension PresenterViewProtocol {
     func setCoordinator(coordinator: Coordinator) {

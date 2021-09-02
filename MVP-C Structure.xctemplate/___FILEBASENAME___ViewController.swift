@@ -20,8 +20,10 @@ final class ___FILEBASENAMEASIDENTIFIER___: UIViewController, PresenterViewProto
 
     var contentView = ___VARIABLE_productName___View()
     
-    required init(presenter: Presenter) {
+    required init(presenter: Presenter, coordinator: Coordinator? = nil) {
         self.presenter = presenter
+        self.coordinator = coordinator
+
         super.init(nibName: nil, bundle: nil)
     }
     
